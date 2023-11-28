@@ -1,12 +1,11 @@
 .ScreenContentCard {
   display: flex;
   gap: 1rem;
-  width: 400px;
+  /* width: 400px; */
   height: 340px;
   background-color: #090f1f;
   border-radius: 1rem;
   padding: 1rem;
-  margin-bottom: 1rem;
 }
 
 .ScreenContentCard img {

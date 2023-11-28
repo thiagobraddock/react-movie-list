@@ -9,6 +9,7 @@ export const data = [
     imageUrl: `${BASE_URL}umX3lBhHoTV7Lsci140Yr8VpXyN.jpg`,
     categories: ['Drama'],
     watched: false,
+    favorite: true,
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ export const data = [
     imageUrl: `${BASE_URL}l5uPlrjcVSI3z3duYeyRAP2E2D0.jpg`,
     categories: ['Sci-Fi', 'Ação'],
     watched: false,
+    favorite: true,
   },
   {
     id: 3,
@@ -27,6 +29,7 @@ export const data = [
     imageUrl: `${BASE_URL}iGZX91hIqM9Uu0KGhd4MUaJ0Rtm.jpg`,
     categories: ['Ação', 'Drama'],
     watched: false,
+    favorite: false,
   },
   {
     id: 4,
@@ -36,6 +39,7 @@ export const data = [
     imageUrl: `${BASE_URL}d74WpIsH8379TIL4wUxDneRCYv2.jpg`,
     categories: ['Drama', 'Romance'],
     watched: false,
+    favorite: true,
   },
   {
     id: 5,
@@ -45,6 +49,7 @@ export const data = [
     imageUrl: `${BASE_URL}r3pPehX4ik8NLYPpbDRAh0YRtMb.jpg`,
     categories: ['Drama'],
     watched: false,
+    favorite: false,
   },
   {
     id: 6,
@@ -54,6 +59,7 @@ export const data = [
     imageUrl: `${BASE_URL}9e3Dz7aCANy5aRUQF745IlNloJ1.jpg`,
     categories: ['Ação', 'Aventura', 'Sci-Fi'],
     watched: false,
+    favorite: false,
   },
   {
     id: 7,
@@ -63,6 +69,7 @@ export const data = [
     imageUrl: `${BASE_URL}lDqMDI3xpbB9UQRyeXfei0MXhqb.jpg`,
     categories: ['Ação', 'Sci-Fi'],
     watched: false,
+    favorite: false,
   },
 
   {
@@ -73,6 +80,7 @@ export const data = [
     imageUrl: `${BASE_URL}hi77F0o55uEhZid1eWRp830CRDx.jpg`,
     categories: ['Ação', 'Aventura', 'Drama'],
     watched: false,
+    favorite: false,
   },
   {
     id: 9,
@@ -82,6 +90,7 @@ export const data = [
     imageUrl: `${BASE_URL}aMWf3Dir359JzCzxvs7PkWj6ubn.jpg`,
     categories: ['Ação', 'Aventura', 'Drama'],
     watched: false,
+    favorite: false,
   },
   {
     id: 10,
@@ -91,6 +100,7 @@ export const data = [
     imageUrl: `${BASE_URL}88MzkX0A05z9isFnExmkHx5e1Zq.jpg`,
     categories: ['Crime', 'Drama', 'Suspense'],
     watched: false,
+    favorite: false,
   },
   {
     id: 11,
@@ -100,6 +110,7 @@ export const data = [
     imageUrl: `${BASE_URL}tJDoa8ewjXsWjKSXw1RPQ48fvvg.jpg`,
     categories: ['Terror', 'Drama'],
     watched: false,
+    favorite: false,
   },
   {
     id: 12,
@@ -109,6 +120,7 @@ export const data = [
     imageUrl: `${BASE_URL}tJDoa8ewjXsWjKSXw1RPQ48fvvg.jpg`,
     categories: ['Crime', 'Drama', 'Suspense'],
     watched: false,
+    favorite: false,
   },
   {
     id: 13,
@@ -118,23 +130,26 @@ export const data = [
     imageUrl: `${BASE_URL}pFzE6PoJbCsFJoB00Lf9UbJksRa.jpg`,
     categories: ['Terror', 'Sci-Fi'],
     watched: false,
+    favorite: false,
   },
-  // {
-  //   id: 14,
-  //   movieTitle: 'Os Jovens Pistoleiros',
-  //   rating: 5,
-  //   releaseYear: 1988,
-  //   imageUrl: `${BASE_URL}wsjaEPserDMXR6aNUByepN2jtb2.jpg`,
-  //   categories: ['Faroeste', 'Aventura'],
-  //   watched: false,
-  // },
-  // {
-  //   id: 15,
-  //   movieTitle: 'Desafio no gelo',
-  //   rating: 4,
-  //   releaseYear: 2004,
-  //   imageUrl: `${BASE_URL}dGxGB9bDgzTlnOowHy20XclZJgi.jpg`,
-  //   categories: ['Drama', 'História'],
-  //   watched: false,
-  // },
+  {
+    id: 14,
+    movieTitle: 'Os Jovens Pistoleiros',
+    rating: 5,
+    releaseYear: 1988,
+    imageUrl: `${BASE_URL}wsjaEPserDMXR6aNUByepN2jtb2.jpg`,
+    categories: ['Faroeste', 'Aventura'],
+    watched: false,
+    favorite: false,
+  },
+  {
+    id: 15,
+    movieTitle: 'Desafio no gelo',
+    rating: 4,
+    releaseYear: 2004,
+    imageUrl: `${BASE_URL}dGxGB9bDgzTlnOowHy20XclZJgi.jpg`,
+    categories: ['Drama', 'História'],
+    watched: false,
+    favorite: false,
+  },
 ];

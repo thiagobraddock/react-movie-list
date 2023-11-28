@@ -5,5 +5,6 @@ export type ScreenContentType = {
   releaseYear: number;
   categories: string[];
   id: number;
-  watched: boolean
+  watched: boolean;
+  favorite: boolean;
 };

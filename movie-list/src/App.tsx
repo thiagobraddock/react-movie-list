@@ -4,12 +4,13 @@ import Header from './components/header/Header';
 import QuickActions from './components/header/QuickActions';
 import { Add } from './components/form';
 import { BASE_URL, data } from './services/data';
-import { ScreenContentCard } from './components/screen-content';
+import { ScreenContentCard, ScreenContentList } from './components/screen-content';
 import { ScreenContentType } from './@types/types';
 
 function App() {
   const [isFormVisible, setIsFormVisible] = useState<boolean>(false);
   const [screenContentList, setScreenContentList] = useState<ScreenContentType[]>(data);
+  const [visibleArea, setVisibleArea] = useState<string>('all');
 
   const handleToggleForm = () => {
     setIsFormVisible(!isFormVisible);
@@ -26,23 +27,26 @@ function App() {
     setScreenContentList(newMovies);
   };
 
+  const handleVisibleArea = (category: string) => {
+    setVisibleArea(category);
+  };
+
   const buttonsMock = [
-    { title: 'Movies e Séries',
+    {
+      title: 'Movies e Séries',
       count: screenContentList.length,
-      onClick: () => setScreenContentList([...screenContentList,
-        {
-          id: 15,
-          movieTitle: 'Desafio no gelo',
-          rating: 4,
-          releaseYear: 2004,
-          imageUrl: `${BASE_URL}dGxGB9bDgzTlnOowHy20XclZJgi.jpg`,
-          categories: ['Drama', 'História'],
-          watched: false,
-        },
-      ]),
+      onClick: () => handleVisibleArea('all'),
     },
-    { title: 'Assistidos', count: 2, onClick: () => console.log('Assistidos') },
-    { title: 'Favoritos', count: 2, onClick: () => console.log('Favoritos') },
+    {
+      title: 'Assistidos',
+      count: screenContentList.filter(({ watched }) => watched).length,
+      onClick: () => handleVisibleArea('watched'),
+    },
+    {
+      title: 'Favoritos',
+      count: screenContentList.filter(({ favorite }) => favorite).length,
+      onClick: () => handleVisibleArea('favorite'),
+    },
     { title: 'Add novo Item', onClick: handleToggleForm },
   ];
 
@@ -50,19 +54,13 @@ function App() {
     <>
       <Header />
       <QuickActions buttonsData={ buttonsMock } />
-      {
-        isFormVisible && <Add />
-      }
+      {isFormVisible && <Add />}
 
-      <ScreenContentCard
-        contentData={ screenContentList[2] }
-        onToggleWatched={ toggleWatched }
+      <ScreenContentList
+        category={ visibleArea }
+        screenContentList={ screenContentList }
+        toggleWatched={ toggleWatched }
       />
-      <ScreenContentCard
-        contentData={ screenContentList[3] }
-        onToggleWatched={ toggleWatched }
-      />
-
     </>
   );
 }

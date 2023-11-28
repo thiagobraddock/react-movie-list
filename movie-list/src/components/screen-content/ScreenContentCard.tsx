@@ -19,22 +19,20 @@ function ScreenContentCard({ contentData, onToggleWatched }: ScreenContentCardPr
   // };
 
   return (
-    <div className="container">
-      <div className="ScreenContentCard">
-        <img src={ contentData.imageUrl } alt="" />
-        <div className="card--details">
-          <h2>{ contentData.movieTitle}</h2>
-          <div className="stars">
-            { '⭐️'.repeat(contentData.rating) }
-          </div>
-          <div className="categories">
-            { contentData.categories.map((cat) => <span key={ cat }>{cat}</span>)}
-          </div>
-          <p>{contentData.releaseYear}</p>
-          <button onClick={ () => onToggleWatched(contentData.id) }>
-            { contentData.watched ? 'Assistido' : 'Não assistido' }
-          </button>
+    <div className="ScreenContentCard">
+      <img src={ contentData.imageUrl } alt="" />
+      <div className="card--details">
+        <h2>{ contentData.movieTitle}</h2>
+        <div className="stars">
+          { '⭐️'.repeat(contentData.rating) }
         </div>
+        <div className="categories">
+          { contentData.categories.map((cat) => <span key={ cat }>{cat}</span>)}
+        </div>
+        <p>{contentData.releaseYear}</p>
+        <button onClick={ () => onToggleWatched(contentData.id) }>
+          { contentData.watched ? 'Assistido' : 'Não assistido' }
+        </button>
       </div>
     </div>
   );
