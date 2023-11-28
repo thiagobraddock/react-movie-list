@@ -1,0 +1,29 @@
+header {
+  background-color: var(--bg-800);
+  & img {
+    width: 30px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  & .container {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+header nav {
+  display: flex;
+  gap: 1rem;
+}
+
+header nav a {
+  font-weight: 100;
+  transition: all 400ms;
+
+  &:hover {
+    color: var(--green-500);
+  }
+}

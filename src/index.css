@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #121829;
+  --bg-800: rgba(18, 24, 41, 0.8);
+
+  backdrop-filter: blur(20px);
+
+  --gray-100: #f8f9fa;
+  --gray-200: #f1f3f5;
+  --gray-300: #e9ecef;
+  --gray-400: #dee2e6;
+  --gray-500: #ced4da;
+  --gray-600: #adb5bd;
+  --gray-700: #6c747c;
+  --gray-800: #495057;
+  --gray-900: #343a40;
+  --gray-1000: #212529;
+
+  --red-100: #fff5f5;
+  --red-200: #ffe3e3;
+  --red-300: #ffc9c9;
+  --red-400: #ffa8a8;
+  --red-500: #ff8787;
+  --red-600: #ff6b6b;
+  --red-700: #cf3b3b;
+  --red-800: #a81414;
+  --red-900: #e34f4f;
+  --red-1000: #ec5858;
+
+  --blue-100: #e7f5ff;
+  --blue-200: #d0ebff;
+  --blue-300: #a5d8ff;
+  --blue-400: #74c0fc;
+  --blue-500: #4dabf7;
+  --blue-600: #339af0;
+  --blue-700: #075bbb;
+  --blue-800: #094493;
+  --blue-900: #1165c5;
+  --blue-1000: #1c70d0;
+
+  --green-100: #ebfbee;
+  --green-200: #e1f2d5;
+  --green-300: #b2f2bb;
+  --green-400: #8ce99a;
+  --green-500: #69db7c;
+  --green-600: #1eb720;
+  --green-700: #0e5c0b;
+  --green-800: #034422;
+  --green-900: #287625;
+  --green-1000: #338130;
+
+  --yellow-100: #fff9db;
+  --yellow-200: #fff3bf;
+  --yellow-300: #ffec99;
+  --yellow-400: #ffe066;
+  --yellow-500: #ffd43b;
+  --yellow-600: #fcc419;
+  --yellow-700: #aa6001;
+  --yellow-800: #8a4001;
+  --yellow-900: #bc7213;
+  --yellow-1000: #c47a1b;
+}
+
+body,
+input,
+textarea,
+button {
+  font: 400 1rem 'Poppins', sans-serif;
+  color: white;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1em;
+  font-weight: 400;
+}
+
+ul,
+ol {
+  margin-bottom: 1em;
+  padding-left: 1em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--bg);
+  background-image: url('./assets/background.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0 auto;
+
+  @media (min-width: 640px) {
+    /* sm */
+    max-width: 640px;
+  }
+
+  @media (min-width: 768px) {
+    /* md */
+    max-width: 768px;
+  }
+
+  @media (min-width: 1024px) {
+    /* lg */
+    max-width: 1024px;
+  }
+
+  @media (min-width: 1280px) {
+    /* xl */
+    max-width: 1280px;
+  }
+
+  @media (min-width: 1536px) {
+    /* 2xl */
+    max-width: 1536px;
+  }
+}

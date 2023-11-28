@@ -1,0 +1,38 @@
+.Add,
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.Add .input-container {
+  width: 100%;
+}
+
+.Add .half-screen {
+  display: flex;
+  gap: 0.5rem;
+
+  & input {
+    width: 100%;
+  }
+}
+
+.Add input {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #323b54;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.Add button {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: var(--green-600);
+  outline: none;
+  border: none;
+
+  &:active {
+    filter: brightness(0.8);
+  }
+}
