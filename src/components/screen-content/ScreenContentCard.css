@@ -1,16 +1,17 @@
 .ScreenContentCard {
   display: flex;
   gap: 1rem;
-  /* width: 400px; */
-  height: 340px;
   background-color: #090f1f;
   border-radius: 1rem;
   padding: 1rem;
+  align-items: stretch;
 }
 
 .ScreenContentCard img {
   border-radius: 1rem;
   object-fit: contain;
+  width: 50%;
+  height: auto;
 }
 
 .card--details {
