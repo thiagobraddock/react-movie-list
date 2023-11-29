@@ -25,6 +25,12 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+.Add select {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #323b54;
+  background-color: rgba(0, 0, 0, 0.2);
+}
 .Add button {
   margin: 1rem 0;
   padding: 1rem;

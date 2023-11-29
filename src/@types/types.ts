@@ -3,7 +3,7 @@ export type ScreenContentType = {
   movieTitle: string;
   rating: number;
   imageUrl: string;
-  releaseYear: number;
+  releaseYear: string;
   categories: string[];
   watched: boolean;
   favorite: boolean;
