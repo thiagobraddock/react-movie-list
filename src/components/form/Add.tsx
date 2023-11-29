@@ -53,7 +53,7 @@ function Add({ onAddNewContent }:AddProps) {
 
     setMovieTitle('');
     setRating(0);
-    setReleaseYear(0);
+    setReleaseYear('');
     setImageUrl('');
     setCategories([]);
 
