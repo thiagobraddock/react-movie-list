@@ -1,22 +1,22 @@
-import { ScreenContentCard } from '.';
+import ScreenContentCard from './ScreenContentCard';
 import { ScreenContentType } from '../../@types/types';
 import './ScreenContentList.css';
 
 type ScreenContentListProps = {
-  category: string;
+  filter: string;
   screenContentList: ScreenContentType[];
   toggleWatched: (id: number) => void;
 };
 
 function ScreenContentList(
-  { category, screenContentList, toggleWatched }: ScreenContentListProps,
+  { filter, screenContentList, toggleWatched }: ScreenContentListProps,
 ) {
   return (
     <div className="Content__List container">
       {screenContentList
         .filter((item) => {
-          if (category === 'watched') return item.watched;
-          if (category === 'favorite') return item.favorite;
+          if (filter === 'watched') return item.watched;
+          if (filter === 'favorite') return item.favorite;
           return true;
         })
         .map((item) => (

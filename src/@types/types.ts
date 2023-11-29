@@ -1,10 +1,10 @@
 export type ScreenContentType = {
+  id: number;
   movieTitle: string;
   rating: number;
   imageUrl: string;
   releaseYear: number;
   categories: string[];
-  id: number;
   watched: boolean;
   favorite: boolean;
 };

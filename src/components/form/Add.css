@@ -36,3 +36,9 @@
     filter: brightness(0.8);
   }
 }
+
+.error-message {
+  color: var(--red-600);
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}

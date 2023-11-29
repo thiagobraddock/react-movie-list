@@ -3,9 +3,10 @@ import './App.css';
 import Header from './components/header/Header';
 import QuickActions from './components/header/QuickActions';
 import { Add } from './components/form';
-import { BASE_URL, data } from './services/data';
-import { ScreenContentCard, ScreenContentList } from './components/screen-content';
+import { data } from './services/data';
+import { ScreenContentList } from './components/screen-content';
 import { ScreenContentType } from './@types/types';
+import { FormValues } from './components/form/Add';
 
 function App() {
   const [isFormVisible, setIsFormVisible] = useState<boolean>(false);
@@ -27,13 +28,13 @@ function App() {
     setScreenContentList(newMovies);
   };
 
-  const handleVisibleArea = (category: string) => {
-    setVisibleArea(category);
+  const handleVisibleArea = (filter: string) => {
+    setVisibleArea(filter);
   };
 
   const buttonsMock = [
     {
-      title: 'Movies e Séries',
+      title: 'Filmes e Séries',
       count: screenContentList.length,
       onClick: () => handleVisibleArea('all'),
     },
@@ -50,11 +51,18 @@ function App() {
     { title: 'Add novo Item', onClick: handleToggleForm },
   ];
 
+  const addNewScreenContent = (content: FormValues) => {
+    const newId = screenContentList[screenContentList.length - 1].id + 1;
+    const newContent = { ...content, id: newId };
+    setScreenContentList([...screenContentList, newContent]);
+  };
+
   return (
     <>
       <Header />
       <QuickActions buttonsData={ buttonsMock } />
-      {isFormVisible && <Add />}
+
+      {isFormVisible && <Add onAddNewContent={ addNewScreenContent } />}
 
       <ScreenContentList
         category={ visibleArea }

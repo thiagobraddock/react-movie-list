@@ -114,16 +114,6 @@ export const data = [
   },
   {
     id: 12,
-    movieTitle: 'Cemitério Maldito',
-    rating: 5,
-    releaseYear: 1991,
-    imageUrl: `${BASE_URL}tJDoa8ewjXsWjKSXw1RPQ48fvvg.jpg`,
-    categories: ['Crime', 'Drama', 'Suspense'],
-    watched: false,
-    favorite: false,
-  },
-  {
-    id: 13,
     movieTitle: 'Phantasm II',
     rating: 5,
     releaseYear: 1988,
@@ -133,7 +123,7 @@ export const data = [
     favorite: false,
   },
   {
-    id: 14,
+    id: 13,
     movieTitle: 'Os Jovens Pistoleiros',
     rating: 5,
     releaseYear: 1988,
@@ -143,7 +133,7 @@ export const data = [
     favorite: false,
   },
   {
-    id: 15,
+    id: 14,
     movieTitle: 'Desafio no gelo',
     rating: 4,
     releaseYear: 2004,
