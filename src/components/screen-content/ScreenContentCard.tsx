@@ -31,7 +31,7 @@ function ScreenContentCard({ contentData, onToggleWatched }: ScreenContentCardPr
         </div>
         <p>{contentData.releaseYear}</p>
         <button onClick={ () => onToggleWatched(contentData.id) }>
-          { contentData.watched ? 'Assistido' : 'Não assistido' }
+          { contentData.watched ? '✅ Já assisti' : '❌ Não assisti' }
         </button>
       </div>
     </div>
