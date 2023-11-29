@@ -61,7 +61,7 @@ function Add({ onAddNewContent }:AddProps) {
   };
 
   return (
-    <div className="container">
+    <div className="container FormAdd">
       <h1>Adicionar nova obra</h1>
       {errorMessage && <p className="error-message">{errorMessage}</p>}
       <form onSubmit={ handleSubmit } className="Add">
