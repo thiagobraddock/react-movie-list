@@ -65,7 +65,7 @@ function App() {
       {isFormVisible && <Add onAddNewContent={ addNewScreenContent } />}
 
       <ScreenContentList
-        category={ visibleArea }
+        filter={ visibleArea }
         screenContentList={ screenContentList }
         toggleWatched={ toggleWatched }
       />
