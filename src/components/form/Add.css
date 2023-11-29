@@ -1,3 +1,7 @@
+.FormAdd {
+  margin-bottom: 2rem !important;
+}
+
 .Add,
 .input-container {
   display: flex;

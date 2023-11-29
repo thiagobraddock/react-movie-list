@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import ScreenContentCard from './ScreenContentCard';
 import { ScreenContentType } from '../../@types/types';
 import './ScreenContentList.css';
@@ -12,7 +13,9 @@ function ScreenContentList(
   { filter, screenContentList, toggleWatched }: ScreenContentListProps,
 ) {
   return (
-    <div className="Content__List container">
+    <div
+      className="Content__List container"
+    >
       {screenContentList
         .filter((item) => {
           if (filter === 'watched') return item.watched;
@@ -20,11 +23,19 @@ function ScreenContentList(
           return true;
         })
         .map((item) => (
-          <ScreenContentCard
+          <motion.div
             key={ item.id }
-            contentData={ item }
-            onToggleWatched={ toggleWatched }
-          />
+            initial={ { opacity: 0 } }
+            animate={ { opacity: 1 } }
+            transition={ { duration: 0.5 } }
+            layout
+          >
+            <ScreenContentCard
+              key={ item.id }
+              contentData={ item }
+              onToggleWatched={ toggleWatched }
+            />
+          </motion.div>
         ))}
     </div>
   );
