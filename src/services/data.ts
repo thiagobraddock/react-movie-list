@@ -143,3 +143,27 @@ export const data = [
     favorite: false,
   },
 ];
+
+export type OptionType = { value: string; label: string; };
+
+export const options: OptionType[] = [
+  { value: 'acao', label: 'Ação' },
+  { value: 'aventura', label: 'Aventura' },
+  { value: 'comedia', label: 'Comédia' },
+  { value: 'drama', label: 'Drama' },
+  { value: 'terror', label: 'Terror' },
+  { value: 'ficcao-cientifica', label: 'Ficção Científica' },
+  { value: 'romance', label: 'Romance' },
+  { value: 'suspense', label: 'Suspense' },
+  { value: 'fantasia', label: 'Fantasia' },
+  { value: 'documentario', label: 'Documentário' },
+  { value: 'animacao', label: 'Animação' },
+  { value: 'musical', label: 'Musical' },
+  { value: 'guerra', label: 'Guerra' },
+  { value: 'policial', label: 'Policial' },
+  { value: 'farooeste', label: 'Faroeste' },
+  { value: 'biografico', label: 'Biográfico' },
+  { value: 'esporte', label: 'Esporte' },
+  { value: 'misterio', label: 'Mistério' },
+  { value: 'noir', label: 'Noir' },
+];

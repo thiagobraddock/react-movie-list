@@ -1,6 +1,9 @@
 import { useState } from 'react';
+import Select from 'react-select';
 import { ScreenContentType } from '../../@types/types';
 import './Add.css';
+import { options } from '../../services/data';
+import { customStyles } from './selectData';
 
 export type FormValues = Omit<ScreenContentType, 'id'>;
 
@@ -11,7 +14,7 @@ type AddProps = {
 function Add({ onAddNewContent }:AddProps) {
   const [movieTitle, setMovieTitle] = useState<string>('');
   const [rating, setRating] = useState<number>(0);
-  const [releaseYear, setReleaseYear] = useState<number>(0);
+  const [releaseYear, setReleaseYear] = useState<string>('');
   const [imageUrl, setImageUrl] = useState<string>('');
   const [categories, setCategories] = useState<string[]>([]);
   const [errorMessage, setErrorMessage] = useState('');
@@ -92,19 +95,24 @@ function Add({ onAddNewContent }:AddProps) {
         <div className="half-screen">
           <div className="input-container">
             <label htmlFor="release-year">Release Year</label>
+            {/* input with only year */}
             <input
-              onChange={ (event) => setReleaseYear(+event.target.value) }
+              onChange={ (event) => setReleaseYear(event.target.value) }
               name="release-year"
-              type="number"
+              type="text"
             />
           </div>
 
           <div className="input-container">
             <label htmlFor="categories">Categories</label>
-            <input
-              onChange={ (event) => setCategories(event.target.value.split(',')) }
-              name="Categories"
-              type="text"
+            <Select
+              styles={ customStyles }
+              options={ options }
+              isMulti
+              value={ options.filter((option) => categories.includes(option.label)) }
+              onChange={ (selectedOpts) => setCategories(
+                selectedOpts ? selectedOpts.map((opt) => opt.label) : [],
+              ) }
             />
           </div>
         </div>
